@@ -9,8 +9,7 @@ interface FetchMovieResponseProps {
 }
 
 export const fetchMovieServices = async (topic: string): Promise<Movie[]> => {
-  const myKey =
-    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYjdjZTM4ZjYwYWMzZDU0Njk2Yzk5MTFlYmVmYmViYSIsIm5iZiI6MTc1NzI2MDgxMS43OTgsInN1YiI6IjY4YmRhYzBiNzYxOGJkMzVjMTFiYzc5ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.J7vV5ffLSgkB9qdJhbdhjkhNpcc8zxloY_nIsnnG63Q";
+  const myKey = import.meta.env.VITE_API_KEY;
   const options = {
     headers: {
       Authorization: `Bearer ${myKey} `,
